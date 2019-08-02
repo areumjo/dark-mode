@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 
+import { BrowserRouter, Route } from 'react-router-dom';
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
 
 import "./styles.css";
 
@@ -24,10 +27,13 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <Charts coinData={coinData} />
+      <Route path="/" exact component = {Home} />
+      <Route path="/about" component = {About} />
+      <Route path="/charts" render={props => <Charts {...props} coinData={coinData} />} />
     </div>
   );
 };
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <BrowserRouter><App /></BrowserRouter>, rootElement);

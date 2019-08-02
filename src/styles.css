@@ -236,3 +236,37 @@ img {
   background-color: #1F2022;
   border: none;
 }
+
+.home-container .home-div {
+  width: 400px;
+  padding: 50px 30px;
+  margin: 50px auto;
+  background: #f68819;
+  opacity: 0.8;
+  color: white;
+  border-radius: 20px;
+}
+
+.home-container h2 {
+  margin: 0 auto;
+  font-size: 32px;
+  color: black;
+}
+.home-container h2:hover {
+  color: #f68819;
+}
+
+.navbar > .activeNavButton {
+  background-color: #4285f4;
+  color: white;
+}
+
+.about-container {
+  width: 400px;
+  padding: 50px 30px;
+  margin: 50px auto;
+  background: #f68819;
+  opacity: 0.8;
+  color: white;
+  border-radius: 20px;
+}
